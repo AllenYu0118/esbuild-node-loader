@@ -30,9 +30,10 @@
     "lint": "eslint \"{src,test}/**/*.ts\"",
     "lint:fix": "npm run lint -- --fix",
     "release": "bumpp --commit --push --tag",
-    "test": "node --experimental-loader ./loader.mjs test/entry.ts"
+    "test": "node --experimental-loader ./swc-loader.mjs test/swc.entry.ts"
   },
   "dependencies": {
+    "@swc/core": "^1.2.133",
     "esbuild": ">=0.13.12"
   },
   "peerDependencies": {
